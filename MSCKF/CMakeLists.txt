@@ -5,6 +5,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c99")
 find_package(OpenCV REQUIRED)
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../Eigen/cmake")
+set(EXECUTABLE_OUTPUT_PATH  "${CMAKE_CURRENT_SOURCE_DIR}/build/")
 find_package(Eigen3 REQUIRED)
 include_directories(${EIGEN3_INCLUDE_DIR})
 
