@@ -1,3 +1,8 @@
+/**
+ * Author	: Michael Fonder
+ * Year		: 2016
+ **/
+
 #include <iostream>
 #include <sstream>
 #include <time.h>
@@ -62,7 +67,7 @@ int main(int argc, char* argv[])
 	data = data.t();
 	
 	Mat ba, bg, IMU_noise, p_CI, q_CI, MSCKF_params, init_uncertainty;
-	filename = "parameters_syn";
+	filename = "parameters";
 	fs.open(filename+".yml", FileStorage::READ);
 	fs["ba"] >> ba;
 	fs["bg"] >> bg;

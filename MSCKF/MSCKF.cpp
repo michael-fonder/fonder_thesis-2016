@@ -1,3 +1,8 @@
+/**
+ * Author	: Michael Fonder
+ * Year		: 2016
+ **/
+
 #include <iostream>
 #include <sstream>
 #include <time.h>
@@ -64,9 +69,9 @@ MSCKF::MSCKF()
 	camera.p_CI = camProjMat*camera.p_CI;
 	
 	im_noise 			= 0.01;
-	tracking_quality 	= 0.1;
-	tracking_tresh 		= 0.6;
-	posEst_tresh 		= 0.0009;
+	tracking_quality 	= 0.05;
+	tracking_tresh 		= 0.55;
+	posEst_tresh 		= 100;
 	
 }
 
@@ -80,9 +85,8 @@ void MSCKF::setCameraParams(const Mat &p_CI, const Mat &q_CI)
 void MSCKF::setFilterParams(const Mat &params)
 {
 	im_noise 			= params.at<float>(0,0);
-	tracking_quality 	= params.at<float>(1,0);
-	tracking_tresh 		= params.at<float>(2,0);
-	posEst_tresh 		= params.at<float>(3,0);
+	maxNbrePoses 		= params.at<float>(1,0);
+	maxNbreFeatures 	= params.at<float>(2,0);
 }
 
 // Input == last measurement

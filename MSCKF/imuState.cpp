@@ -1,3 +1,8 @@
+/**
+ * Author	: Michael Fonder
+ * Year		: 2016
+ **/
+
 #include <iostream>
 #include <sstream>
 #include <time.h>

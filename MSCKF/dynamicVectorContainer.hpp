@@ -1,3 +1,8 @@
+/**
+ * Author	: Michael Fonder
+ * Year		: 2016
+ **/
+
 #ifndef DYNAMIC_VECTOR_CONTAINER
 #define DYNAMIC_VECTOR_CONTAINER
 

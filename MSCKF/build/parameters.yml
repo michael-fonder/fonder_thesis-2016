@@ -1,0 +1,60 @@
+%YAML:1.0
+
+# IMU biases
+ba: !!opencv-matrix
+    rows: 3
+    cols: 1
+    dt: f
+    data: [  -0.301112, -0.40392, 0.0021]
+bg: !!opencv-matrix
+    rows: 3
+    cols: 1
+    dt: f
+    data: [ 0.03017625, 0.0039264, 0.080586]
+    
+# IMU noise characteristics
+IMU_noise: !!opencv-matrix
+    rows: 4
+    cols: 1
+    dt: f
+    data: [ 0.000004,   # Gyroscope noise
+            0.00000001, # Gyroscope bias random walk
+            0.0037,     # Accelerometer noise
+            0.000000035]# Accelerometer bias random walk
+    
+# Initial uncertainty on the IMU state estimation
+init_uncertainty: !!opencv-matrix
+    rows: 8
+    cols: 1
+    dt: f
+    data: [ 0.0000001,  #orientation
+            0.0000001,  #position
+            0.0000001,  #velocity
+            0.0000001,  #bias gyro
+            0.00001,    #bias accelero
+            0.0001,     #time delay
+            0.0001,     #orientation camera
+            0.0001]     #position camera
+
+# Position of the camera with respect to the IMU
+p_CI: !!opencv-matrix
+    rows: 3
+    cols: 1
+    dt: f
+    data: [ 0.0, -0.0, 0.0]
+    
+# Orientation of the camera with respect to the IMU
+q_CI: !!opencv-matrix
+    rows: 4
+    cols: 1
+    dt: f
+    data: [ 0.5, -0.5, 0.5, -0.5]
+    
+    
+MSCKF_params: !!opencv-matrix
+    rows: 3
+    cols: 1
+    dt: f
+    data: [ 0.008,  # Image IMU_noise
+            24,     # maximum number of imu poses allowed in the state
+            50]     # Minimum number of feature required to be tracked simultaneously

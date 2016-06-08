@@ -1,3 +1,8 @@
+/**
+ * Author	: Michael Fonder
+ * Year		: 2016
+ **/
+
 #include <Eigen/Dense>
 
 #include <opencv2/core/core.hpp>

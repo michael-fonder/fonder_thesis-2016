@@ -1,3 +1,8 @@
+/**
+ * Author	: Michael Fonder
+ * Year		: 2016
+ **/
+
 #ifndef MSCKF_HPP
 #define MSCKF_HPP
 
