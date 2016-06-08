@@ -1,4 +1,4 @@
-Use the CMakeLists to build a demonstration of our implemetation.
+Use the CMakeLists to build a demonstration of the implemetation.
 
 The binary file will be build in the "build" folder.
 
@@ -9,7 +9,7 @@ If you want to run the demo on your own dataset, you have to provide the followi
     * distCoeffs.yml    : A file containing the distortion parameters of the camera
     * data.yml          : A file containing the flight log of IMU measurements at 100z
     * parameters.yml    : A file containing the parameters required for the initialisation of the MSCKF
-    * flight_video.avi  : A video file recorded during the flight (framerate 30Hz)
+    * flight_cut.avi    : A video file recorded during the flight (framerate 30Hz)
     
 Note that the video file and the flight log should begin at the same time instant.
 The camera calibration parameters have the same format than the one used by opencv.
