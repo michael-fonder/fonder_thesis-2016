@@ -1,6 +1,6 @@
 Use the CMakeLists to create a makefile which can be used to build a demonstration of the implementation.
 
-IMPORT : in order to be able to compile the code, you need to have OpenCV installed on your computer
+IMPORT : in order to be able to compile the code, you need to have OpenCV and Eigen3 installed on your computer
 
 The binary file will be built in the "build" folder.
 
